@@ -6,7 +6,7 @@ export default function personHealth(object) {
     case object.health > 50:
       status = 'healthy';
       break;
-    case (15 < object.health <= 50):
+    case (object.health > 15 && object.health <= 50):
       status = 'wounded';
       break;
     case object.health < 15:
