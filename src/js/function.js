@@ -1,17 +1,21 @@
 import person from './person.js';
 
-export default function personHealth(person) {
+export default function personHealth(object) {
   let status;
   switch (true) {
-    case person.health > 50:
+    case object.health > 50:
       status = 'healthy';
       break;
-    case (person.health > 15 <= 50):
+    case (object.health > 15 <= 50):
       status = 'wounded';
       break;
-    case person.health < 15:
+    case object.health < 15:
       status = 'critical';
       break;
+    default:
+      status = 'Значение не задано';
   }
   return status;
 }
+
+personHealth(person);
